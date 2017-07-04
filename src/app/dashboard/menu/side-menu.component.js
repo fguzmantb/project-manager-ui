@@ -7,19 +7,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var primeng_1 = require("primeng/primeng");
-var menu_bar_component_1 = require("./menu-bar.component");
-var MenuBarModule = (function () {
-    function MenuBarModule() {
+var SideMenuComponent = (function () {
+    function SideMenuComponent() {
     }
-    return MenuBarModule;
+    SideMenuComponent.prototype.ngOnInit = function () {
+        this.items = [
+            { label: 'Nuevo Projecto', icon: 'fa-plus' },
+            { label: 'Mis HHRR', icon: 'fa-user' },
+        ];
+    };
+    return SideMenuComponent;
 }());
-MenuBarModule = __decorate([
-    core_1.NgModule({
-        imports: [primeng_1.MenubarModule],
-        declarations: [menu_bar_component_1.MenuBarComponent],
-        exports: [menu_bar_component_1.MenuBarComponent]
+SideMenuComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'side-menu-component',
+        templateUrl: 'side-menu.component.html'
     })
-], MenuBarModule);
-exports.MenuBarModule = MenuBarModule;
-//# sourceMappingURL=menu-bar.module.js.map
+], SideMenuComponent);
+exports.SideMenuComponent = SideMenuComponent;
+//# sourceMappingURL=side-menu.component.js.map

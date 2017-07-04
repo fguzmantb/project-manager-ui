@@ -6,7 +6,7 @@ import {MenuItem} from 'primeng/primeng';
     selector: 'menu-bar-component',
     templateUrl: 'menu-bar.component.html'
 })
-export class MenuBarComponent implements OnInit{
+export class MenuBarComponent{
 
     items: MenuItem[];
 
@@ -24,66 +24,8 @@ export class MenuBarComponent implements OnInit{
                     ]
                 },
                     {label: 'Open'},
-                    {separator: true},
                     {label: 'Quit'}
                 ]
-            },
-            {
-                label: 'Edit',
-                icon: 'fa-edit',
-                items: [
-                    {label: 'Undo', icon: 'fa-mail-forward'},
-                    {label: 'Redo', icon: 'fa-mail-reply'}
-                ]
-            },
-            {
-                label: 'Help',
-                icon: 'fa-question',
-                items: [
-                    {
-                        label: 'Contents'
-                    },
-                    {
-                        label: 'Search',
-                        icon: 'fa-search',
-                        items: [
-                            {
-                                label: 'Text',
-                                items: [
-                                    {
-                                        label: 'Workspace'
-                                    }
-                                ]
-                            },
-                            {
-                                label: 'File'
-                            }
-                        ]}
-                ]
-            },
-            {
-                label: 'Actions',
-                icon: 'fa-gear',
-                items: [
-                    {
-                        label: 'Edit',
-                        icon: 'fa-refresh',
-                        items: [
-                            {label: 'Save', icon: 'fa-save'},
-                            {label: 'Update', icon: 'fa-save'},
-                        ]
-                    },
-                    {
-                        label: 'Other',
-                        icon: 'fa-phone',
-                        items: [
-                            {label: 'Delete', icon: 'fa-minus'}
-                        ]
-                    }
-                ]
-            },
-            {
-                label: 'Quit', icon: 'fa-minus'
             }
         ];
     }

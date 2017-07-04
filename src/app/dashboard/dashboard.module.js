@@ -8,8 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var dashboard_component_1 = require("./dashboard.component");
-var menu_bar_module_1 = require("./menu-bar/menu-bar.module");
 var primeng_1 = require("primeng/primeng");
+var side_menu_component_1 = require("./menu/side-menu.component");
+var menu_bar_component_1 = require("./menu-bar/menu-bar.component");
+var project_panel_component_1 = require("./project-panel/project-panel.component");
+var animations_1 = require("@angular/platform-browser/animations");
 var DashBoardModule = (function () {
     function DashBoardModule() {
     }
@@ -17,8 +20,8 @@ var DashBoardModule = (function () {
 }());
 DashBoardModule = __decorate([
     core_1.NgModule({
-        imports: [menu_bar_module_1.MenuBarModule, primeng_1.ButtonModule],
-        declarations: [dashboard_component_1.DashboardComponent],
+        imports: [primeng_1.ButtonModule, primeng_1.MenuModule, primeng_1.InputTextModule, primeng_1.MenubarModule, primeng_1.PanelModule, animations_1.BrowserAnimationsModule],
+        declarations: [dashboard_component_1.DashboardComponent, side_menu_component_1.SideMenuComponent, menu_bar_component_1.MenuBarComponent, project_panel_component_1.ProjectPanelComponent],
         exports: [dashboard_component_1.DashboardComponent]
     })
 ], DashBoardModule);
